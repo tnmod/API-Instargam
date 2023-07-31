@@ -1,0 +1,16 @@
+<?php
+$databaseHost = '127.0.0.1:3306';
+$databaseName = 'INSTAGRAM';
+$databaseUsername = 'root';
+$databasePassword = '01285740786Tin@';
+
+try {
+	$dbConn = new PDO(
+		"mysql:host={$databaseHost};dbname={$databaseName}",
+		$databaseUsername,
+		$databasePassword
+	);
+	$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+	echo $e->getMessage();
+}
